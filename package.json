@@ -1,0 +1,22 @@
+{
+  "name": "y",
+  "version": "0.0.1",
+  "description": "A presentation about managing resources and their relationships in Angular.js",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fleon/angularjs-and-resources.git"
+  },
+  "author": "Himanshu Kapoor <info@fleon.org>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fleon/angularjs-and-resources/issues"
+  },
+  "homepage": "https://github.com/fleon/angularjs-and-resources",
+  "dependencies": {
+    "http-server": "^0.6.1"
+  }
+}
