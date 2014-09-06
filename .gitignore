@@ -27,8 +27,6 @@ Icon
 ### PhPStorm ###
 .idea/
 
-bower_components
-
 ### Node/Grunt/npm Related ###
 node_modules
 npm-debug.log
