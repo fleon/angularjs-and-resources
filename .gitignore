@@ -1,0 +1,35 @@
+node_modules
+.sass-cache
+temp
+.bower
+
+# Created by http://gitignore.io
+### SublimeText ###
+# SublimeText project files
+*.sublime-*
+
+##vim related
+*.swp
+
+### OSX ###
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear on an external disk
+.Spotlight-V100
+.Trashes
+
+### PhPStorm ###
+.idea/
+
+bower_components
+
+### Node/Grunt/npm Related ###
+node_modules
+npm-debug.log
+.grunt
