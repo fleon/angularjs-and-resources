@@ -90,37 +90,27 @@
 				</section>
 
 				<section>
-					<h2>The interwebs today...</h2>
+					<h2>The Web World Today...</h2>
 					<hr>
 					<h3>Single Page Apps&trade;</h3>
-					<p><small><em>(Today's Hot Topic)</em></small></p>
+					<!--<p><small><em>(Today's Hot Topic)</em></small></p>-->
 					<p>+</p>
 					<h3>Front-end Frameworks</h3>
-					<p><small><em>(Our Pick: Angular.js)</em></small></p>
+					<!-- <p><small><em>(Our Pick: Angular.js)</em></small></p> -->
 					<p>+</p>
-					<h3>Moar Stuff</h3>
-					<p><small><em>(Package Management, AMD, Project Organisation, etc.)</em></small></p>
+					<h3>More Stuff</h3>
+					<!-- <p><small><em>(Package Management, AMD, Project Organisation, etc.)</em></small></p> -->
 				</section>
 
 				<section>
 					<section>
-						<h2>Why Single Page Apps&trade;?</h2>
+						<h2>Why Single Page Apps?</h2>
 						<hr>
 						<p>Why should you make Single Page Apps?</p>
 						<ul>
-							<li class="fragment">They're cool</li>
-							<li class="fragment">Everybody else is doing it</li>
-							<li class="fragment"><strike>The &trade; symbol on it looks cool</strike></li>
-						</ul>
-					</section>
-					<section>
-						<h2>Why Single Page Apps&trade;?</h2>
-						<hr>
-						<p>The real reasons...</p>
-						<ul>
-							<li class="fragment">Faster experience: no page refresh, on-demand data fetching</li>
-							<li class="fragment">Better runtimes: V8, spidermonkey</li>
-							<li class="fragment">Heightened expectations: new products, mobile</li>
+							<li class="fragment">Faster experience</li>
+							<li class="fragment">Better runtimes</li>
+							<li class="fragment">Heightened expectations</li>
 						</ul>
 					</section>
 					<section>
@@ -135,7 +125,6 @@
 						<p class="fragment"><em>with Angular.js + Angular UI Router + Require.js</em></p>
 					</section>
 				</section>
-
 				<section>
 					<section>
 						<h2>And then, there were...</h2>
@@ -159,21 +148,21 @@
 						<hr>
 						<ul style="width: 100%">
 							<li class="fragment">The controller
-								<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+								<pre><code data-trim contenteditable style="font-size: 28px; line-height: 1em; margin-top: 20px;">
 function MyCtrl($scope) {
   $scope.myModel = 'hello world';
 }
 								</code></pre>
 							</li>
 							<li class="fragment">The view
-								<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+								<pre><code data-trim contenteditable style="font-size: 28px; line-height: 1em; margin-top: 20px;">
 <h1 ng-controller="MyCtrl">
   {{myModel}}
 </h1>
 								</code></pre>
 							</li>
 							<li class="fragment">The model
-								<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+								<pre><code data-trim contenteditable style="font-size: 28px; line-height: 1em; margin-top: 20px;">
 // myModel is a POJO model
 								</code></pre>
 							</li>
@@ -207,7 +196,7 @@ function MyCtrl($scope) {
 						<hr>
 						<ul style="width: 100%">
 							<li class="fragment">The controller
-								<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+								<pre><code data-trim contenteditable style="font-size: 28px; line-height: 1em; margin-top: 20px;">
 function MyCtrl($scope, $http) {
   $http.get('/user').success(function (user) {
     $scope.user = user;
@@ -216,16 +205,15 @@ function MyCtrl($scope, $http) {
 								</code></pre>
 							</li>
 							<li class="fragment">The view
-								<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+								<pre><code data-trim contenteditable style="font-size: 28px; line-height: 1em; margin-top: 20px;">
 <h1 ng-controller="MyCtrl">
   Hello there, {{user.name}}
 </h1>
 								</code></pre>
 							</li>
 							<li class="fragment">The model
-								<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
-// HTTP GET
-{
+								<pre><code data-trim contenteditable style="font-size: 28px; line-height: 1em; margin-top: 20px;">
+{ // HTTP GET Response
   "id": 1234,
   "name": "John Doe",
   "email": "johndoe@example.com"
@@ -290,8 +278,6 @@ function MyCtrl($scope, $http) {
 					</section>
 					<section>
 						<h2>This looks like a job for...</h2>
-						<hr>
-						<img src="images/tmnt.gif">
 					</section>
 					<section>
 						<h1><em>$resource</em></h1>
@@ -312,7 +298,7 @@ function MyCtrl($scope, $http) {
 						<h2>Time for some code...</h2>
 						<ul style="width: 100%">
 							<li class="fragment">The model
-								<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+								<pre><code data-trim contenteditable style="font-size: 28px; line-height: 1em; margin-top: 20px;">
 app.factory('UserResource', function () {
   return $resource('/user/:userId', {
     userId: '@id'
@@ -321,7 +307,7 @@ app.factory('UserResource', function () {
 								</code></pre>
 							</li>
 							<li class="fragment">The controller
-								<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+								<pre><code data-trim contenteditable style="font-size: 28px; line-height: 1em; margin-top: 20px;">
 function MyCtrl($scope, UserResource) {
   $scope.user = UserResource.get({
     id: 1
@@ -330,7 +316,7 @@ function MyCtrl($scope, UserResource) {
 								</code></pre>
 							</li>
 							<li class="fragment">The view
-								<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+								<pre><code data-trim contenteditable style="font-size: 28px; line-height: 1em; margin-top: 20px;">
 <h1 ng-controller="MyCtrl">
   Hello there, {{user.name}}
 </h1>
@@ -398,11 +384,11 @@ function MyCtrl($scope, UserResource) {
 						</ul>
 					</section>
 					<section>
-						<h2>Here's an example:</h2>
+						<h2>Another Example + Code:</h2>
 						<p>In addition to the code we already have:</p>
 						<ul style="width: 100%" class="fragment">
 							<li>The model
-								<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+								<pre><code data-trim contenteditable style="font-size: 28px; line-height: 1em; margin-top: 20px;">
 app.factory('UserResource', function () {
   return $resource('/user/:userId', {
     userId: '@id'
@@ -411,7 +397,7 @@ app.factory('UserResource', function () {
 								</code></pre>
 							</li>
 							<li>The controller
-								<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+								<pre><code data-trim contenteditable style="font-size: 28px; line-height: 1em; margin-top: 20px;">
 function MyCtrl($scope, UserResource) {
   $scope.user = UserResource.get({
     id: 1
@@ -420,7 +406,7 @@ function MyCtrl($scope, UserResource) {
 								</code></pre>
 							</li>
 							<li>The view
-								<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+								<pre><code data-trim contenteditable style="font-size: 28px; line-height: 1em; margin-top: 20px;">
 <h1 ng-controller="MyCtrl">
   Hello there, {{user.name}}
 </h1>
@@ -432,7 +418,7 @@ function MyCtrl($scope, UserResource) {
 						<p>Let us add another view that does something else, and something more...</p>
 						<ul style="width: 100%">
 							<li class="fragment">The view
-								<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+								<pre><code data-trim contenteditable style="font-size: 28px; line-height: 1em; margin-top: 20px;">
 <hr>
 <h2>Edit your name</h2>
 <form ng-controller="MyEditCtrl" ng-if="user.name">
@@ -442,7 +428,7 @@ function MyCtrl($scope, UserResource) {
 								</code></pre>
 							</li>
 							<li class="fragment">The controller
-								<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+								<pre><code data-trim contenteditable style="font-size: 28px; line-height: 1em; margin-top: 20px;">
 function MyEditCtrl($scope, UserResource) {
   $scope.user = UserResource.get({
     id: 1
@@ -469,10 +455,25 @@ function MyEditCtrl($scope, UserResource) {
 							<li class="fragment">When it changes, propagate that change to all instances</li>
 						</ul>
 					</section>
+					<section>
+						<h2>Real World Example</h2><hr>
+					</section>
+					<section>
+						<img src="images/vwo1.png">
+					</section>
+					<section>
+						<img src="images/vwo2.png">
+					</section>
+					<section>
+						<img src="images/vwo3.png">
+					</section>
 				</section>
 				<section>
 					<section>
-						<h2>Real world inconsistencies:</h2>
+						<h2>In the real world, things aren't so simple...</h2>
+					</section>
+					<section>
+						<h2>Complicated inconsistencies:</h2>
 						<hr>
 						<ul>
 							<li class="fragment">Editing a resource that is related to multiple parent resources</li>
@@ -500,6 +501,14 @@ function MyEditCtrl($scope, UserResource) {
 							<li class="fragment">Example: <br><code>post.author</code> is an <code>AuthorResource</code>, <br><code>author.posts</code> is a collection of <code>PostResource</code>s</li>
 							<li class="fragment">Four kinds of relationships: one-to-one, one-to-many, many-to-one, many-to-many</li>
 						</ul>
+					</section>
+					<section>
+						<h2>Example</h2><hr>
+						<img src="images/relationship problem.png">
+					</section>
+					<section>
+						<h2>Diagram (Kinds of relationships)</h2><hr>
+						<img src="images/relationship diagram.png">
 					</section>
 					<section>
 						<h2>Subsequent problem</h2><hr>
@@ -535,7 +544,7 @@ function MyEditCtrl($scope, UserResource) {
 					</section>
 					<section>
 						<h2>Example input:</h2><hr>
-						<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+						<pre><code data-trim contenteditable style="font-size: 28px; line-height: 1em; margin-top: 20px;">
 // GET /posts
 [{
   "id": 1,
@@ -557,19 +566,19 @@ function MyEditCtrl($scope, UserResource) {
 					</section>
 					<section>
 						<h2>The output:</h2><hr>
-						<pre class="fragment"><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+						<pre class="fragment"><code data-trim contenteditable style="font-size: 28px; line-height: 1em; margin-top: 20px;">
 // Output obtained by transforming the response above
 var output = /* ... */;
 
 expect(output).toEqual(any(Array));
 expect(output.length).toBe(3);
 						</code></pre>
-						<pre class="fragment"><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+						<pre class="fragment"><code data-trim contenteditable style="font-size: 28px; line-height: 1em; margin-top: 20px;">
 expect(output[0]).toEqual(any(PostResource))
 expect(output[1]).toEqual(any(PostResource))
 expect(output[2]).toEqual(any(PostResource))
 						</code></pre>
-						<pre class="fragment"><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+						<pre class="fragment"><code data-trim contenteditable style="font-size: 28px; line-height: 1em; margin-top: 20px;">
 expect(output[0].createdBy).toBe(output[1].createdBy);
 expect(output[0].createdBy).toBe(output[2].createdBy);
 						</code></pre>
@@ -586,6 +595,9 @@ expect(output[0].createdBy).toBe(output[2].createdBy);
 								<span class="fragment">Key: the unique identification above</span><br>
 								<span class="fragment">Value: the actual resource</span>
 							</li>
+							<li class="fragment">Knowing how to identify unique resources<br>
+								<span class="fragment">By maintaining a schema</span><br>
+							</li>
 						</ul>
 					</section>
 				</section>
@@ -601,7 +613,6 @@ expect(output[0].createdBy).toBe(output[2].createdBy);
 						<p class="fragment">How?</p>
 						<ul>
 							<li class="fragment">Abstract out the core logic from configurable input</li>
-							<li class="fragment">In this particular case: the configuration is a schema</li>
 						</ul>
 					</section>
 					<section>
@@ -620,6 +631,10 @@ expect(output[0].createdBy).toBe(output[2].createdBy);
 				</section>
 				<section>
 					<section>
+						<h2>Well you'd say...</h2><hr>
+						<img src="images/escalated.gif" class="fragment">
+					</section>
+					<section>
 						<h2>Putting it all together</h2><hr>
 						<ul>
 							<li class="fragment">Relationships</li>
@@ -632,6 +647,10 @@ expect(output[0].createdBy).toBe(output[2].createdBy);
 					</section>
 					<section>
 						<h2>Resource Manager</h2><hr>
+						<img src="images/rm diagram.png" class="fragment">
+					</section>
+					<section>
+						<h2>Resource Manager</h2><hr>
 						<ul>
 							<li class="fragment">An abstraction of resource-related problems faced while developing VWO</li>
 							<li class="fragment">A lot of them described in this presentation</li>
@@ -640,7 +659,7 @@ expect(output[0].createdBy).toBe(output[2].createdBy);
 					</section>
 				</section>
 				<section>
-					<h2>General Learnings</h2><hr>
+					<h2>General Learnings / Takeaways</h2><hr>
 					<ul>
 						<li class="fragment">Abstract out duplicate logic</li>
 						<li class="fragment">Abstract out configurations from the logic</li>
@@ -664,7 +683,6 @@ expect(output[0].createdBy).toBe(output[2].createdBy);
 							</ul>
 						</li>
 						<li>View this presentation: <a href="http://lab.fleon.org/angularjs-and-resources/">http://lab.fleon.org/angularjs-and-resources/</a></li>
-						<li>Download / Fork on GitHub: <a href="https://github.com/fleon/angularjs-and-resources/">http://github.com/fleon/angularjs-and-resources/</a></li>
 					</ul>
 				</section>
 			</div>
